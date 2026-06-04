@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit - CRUD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">CRUD</h1>
+        
+        <!-- Edit Form -->
+        <div class="card">
+            <h2 class="form-title">Edit Person</h2>
+            <form method="POST" action="{{ url_for('update', id=person.id) }}" class="form">
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="number" id="id" name="id" value="{{ person.id }}" readonly disabled>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="{{ person.name }}" required placeholder="Enter name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" value="{{ person.age }}" required placeholder="Enter age" min="1" max="150">
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-update">Update</button>
+                    <a href="{{ url_for('index') }}" class="btn btn-cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
