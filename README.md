@@ -1,10 +1,12 @@
 # Flask ORM CRUD Web Application
 
+## Output
+
 <p align="center">
   <img src="output.png" width="800">
 </p>
 
-A complete CRUD (Create, Read, Update, Delete) web application built with Flask, SQLAlchemy ORM, and SQLite.
+The application provides a user-friendly interface for performing CRUD operations. All records are stored in the SQLite database (`data.db`) using Flask-SQLAlchemy ORM. Any changes made through the application, such as adding, updating, or deleting records, are automatically reflected in the database and persist even after restarting the application. The current and previous records can be viewed directly from the application interface, which displays the latest data stored in `data.db`.
 
 ## Project Structure
 
